@@ -1,0 +1,58 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <style>
+        .list-group {
+            display: none; /*gizle......*/
+        }
+    </style>
+    <script src="~/Scripts/jquery-3.6.0.js"></script>
+    <script>
+        var flag = false;
+        function Goster(param) {
+
+            //if (!flag) {
+            //    document.getElementById("ul_" + param).style.display = "block"; // elementi gizle..
+            //}
+            //else {
+            //    document.getElementById("ul_" + param).style.display = "none"; // elementi gizle..
+            //}
+            //flag = !flag;
+
+            //$("#ul_" + param).show();
+            //$("#ul_" + param).toggle();
+            //$("#ul_" + param).slideDown();
+            //$("#ul_" + param).slideToggle();
+
+          // $("#ul_" + param).fadeIn();
+            $("#ul_" + param).fadeToggle();
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            @for (int i = 1; i <= 10; i++)
+            {
+                <div class="col-lg-6">
+                    <input id="btn_@i" type="button" value="@i ler tablosu" class="btn btn-info" onclick="Goster(@i)" />
+                    <ul id="ul_@i" class="list-group">
+                        @for (int j = 1; j <= 10; j++)
+                        {
+                            int sonuc = i * j;
+                            <li class="list-group-item">@i<b> x </b>@j = @sonuc</li>
+                        }
+                    </ul>
+                    <br />
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>

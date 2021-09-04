@@ -1,0 +1,30 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            @for (int i = 1; i <= 10; i++)
+            {
+                <div class="col-lg-6">
+                    <ul class="list-group">
+                        @for (int j = 1; j <= 10; j++)
+                        {
+                            int sonuc = i * j;
+                            <li class="list-group-item">@i<b> x </b>@j = @sonuc</li>
+                        }
+                    </ul>
+                    <br />
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>

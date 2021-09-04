@@ -1,0 +1,38 @@
+﻿@{
+    Layout = null;
+
+    string isim = "ekrem YILDIRIM";
+    string isim1 = "kaan MEŞE";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        .cshtml dosyaları normal html yazılabilen dosyalardır..ancak iis üzerinden çalıştırılabilir. asp.net mvc platormunda çalıştırılabilir. bunun nedeni bu dosya özel bir dosyadır. asp.net mvc platformundan view engine tarafından yorumlanır... bu dosyasının html uzantılı dosyalardan en önemli farkı içerisinde c# yazılabilmesidir.. cshtml uzantılı dosyalar içerisinde c# kodunu <b>RAZOR</b> synaxı ile yazarız....
+        Örneğin ekrana tarih yazdıralım...
+        <h1>@DateTime.Now</h1>
+        <br />
+        <b>@isim</b>
+        <br />
+        <i>@isim1</i>
+        <br />
+
+        ben bir sayfayım...
+
+        <br />
+
+        <a href="/Razor/Index">Razor sayfasına git...</a>
+        <br />
+        <a href="/CarpimTablosu/Index">Çarpım tablosuna git</a>
+        <br />
+        <a href="/CarpimTablosu/Menum">Çarpım tablosu 2'ye git</a>
+
+
+    </div>
+</body>
+</html>

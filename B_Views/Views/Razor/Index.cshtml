@@ -1,0 +1,35 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <a href="/Home/Index">Geri Dön...</a>
+        <br />
+
+        <br />
+        @{
+            // burası c# yazılacak yer..
+            int sonuc = 2 + 3;
+
+            List<string> isimler = new List<string>();
+            isimler.Add("Kaan");
+            isimler.Add("Öykü");
+            isimler.Add("Rukiye");
+            isimler.Add("Emre");
+            isimler.Add("Ferit");
+        }
+        @sonuc
+        <br />
+        @foreach (var item in isimler)
+        {
+            <h1>@item</h1>
+        }
+    </div>
+</body>
+</html>
