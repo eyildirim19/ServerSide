@@ -1,0 +1,24 @@
+﻿@*sayfanın modelini tanımlıyoruz. model tanımlarken m ile başlıyoruz..*@
+
+@model C_Models.Models.Ogrenci
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <b>
+            Adi   :  @Model.Adi
+        </b>
+        <b>
+            SoyAdı  : @Model.SoyAdi
+        </b>
+    </div>
+</body>
+</html>

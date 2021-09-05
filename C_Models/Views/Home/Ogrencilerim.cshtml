@@ -1,0 +1,27 @@
+﻿@model List<C_Models.Models.Ogrenci>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Ogrencilerim</title>
+</head>
+<body>
+    <div>
+        <ul>
+            @foreach (var item in Model)
+            {
+                <li>
+                    @item.Adi @item.SoyAdi
+                </li>
+            }
+        </ul>
+
+    </div>
+</body>
+</html>
