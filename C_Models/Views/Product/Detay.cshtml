@@ -1,0 +1,45 @@
+﻿@model C_Models.Models.Urun
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Detay</title>
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+
+    <style>
+        .oldPrice {
+            text-decoration: line-through;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <img src="~/@Model.ImagePath" class="img-fluid" />
+            </div>
+            <div class="col-lg-8">
+                <h1 class="card-title">@Model.Adi</h1>
+                <h3>@Model.Fiyat</h3>
+                @if (Model.IndirimVar == true)
+                {
+                    <h3 class="text-danger oldPrice">@Model.EskiFiyat</h3>
+                    <h4>
+                        @{ decimal kazanc = Model.EskiFiyat - Model.Fiyat;}
+                        Kazancınız = @kazanc
+                    </h4>
+                }
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿<!--
+    birden fazla ürün göstereceğimiz için viewımızın modeli liste olacaktır...
+
+    Unutmayın bir viewın bir modeli olur. Model actiondan ne gönderiliyorsa view'da o tanımlanmalıdır...
+    -->
+
+@model List<C_Models.Models.Urun>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+
+        <div class="row">
+
+
+
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4">
+                    <div class="card" style="width: 18rem;">
+                        <!--img içerisindeki alt attribute alternate anlamına gelir. image yüklenemezse bu attribute içerisindeki text görünür..-->
+                        <img src="~/@item.ImagePath" alt="Kaan..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Adi</h5>
+                            <a href="Detay/@item.ID" class="btn btn-primary">İncele</a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</body>
+</html>

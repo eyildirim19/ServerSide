@@ -17,5 +17,7 @@ namespace C_Models.Models
 
         public string ImagePath { get; set; }
 
+        public bool? IndirimVar { get; set; }
+
     }
 }
