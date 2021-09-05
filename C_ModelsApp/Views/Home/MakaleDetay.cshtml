@@ -1,0 +1,49 @@
+﻿@model C_ModelsApp.Models.Makale
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Makale Detay</title>
+
+    <style>
+        #addyorum {
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+        <h1>@Model.Baslik  </h1>
+        <p>
+            Kategorisi =@Model.Kategori.Adi
+        </p>
+        <p>@Model.Icerik</p>
+
+        <h1>YORUMLAR   <a id="addyorum" href="/Home/AddYorum/@Model.ID">Yeni yorum ekle</a>   </h1>
+        <hr />
+        @foreach (var item in Model.Yorum)
+        {
+            <h3>Yorum Yapan : @item.Nick</h3>
+            <h5>Mesaj : @item.Icerik</h5>
+        }
+
+
+        @*
+
+            -- Model nedir işledik.. Modeli araştırın.. 
+            -- Layout Page
+            -- Partial View
+            -- Html Helpers
+            
+            *@
+
+    </div>
+</body>
+</html>

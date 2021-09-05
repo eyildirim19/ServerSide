@@ -1,0 +1,38 @@
+﻿@model List<C_ModelsApp.Models.Makale>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @foreach (var item in Model)
+        {
+            <h1>@item.Baslik</h1>
+            <p>
+                @{
+                    string icerik = "";
+                    if (item.Icerik.Length > 150)
+                    {
+                        icerik = item.Icerik.Substring(0, 150);
+                    }
+                    else
+                    {
+                        icerik = item.Icerik;
+                    }
+                }
+
+                @icerik...<a href="/Home/MakaleDetay/@item.ID">Devamı</a>
+            </p>
+
+        }
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿@model C_ModelsApp.Models.Yorum
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddYorum</title>
+</head>
+<body>
+    <div>
+
+        Buradan Makaleye Yorum Yapabilirsiniz...
+
+
+        @*Actiona form yardımıyla verileri taşıyacağız*@
+        <form method="post" action="/Home/AddYorum">
+
+            <!--hidden kontroller sayfada veri tutmak için kullanılır. sayfada durur ama gösterilmez...-->
+            <input type="hidden" name="MakaleId" value="@Model.MakaleID" />
+
+            @* inputlarımın nameleri model propertylerimin nameleri ile aynı olmalıdır. Actiondan Modeli parametre olarak beklediğimizde isimler otomatik maplenir.  *@
+            Kullanıcı Adınız
+            <br />
+            <input type="text" name="Nick" />
+            <br />
+            Mesajınız
+            <br />
+            <textarea name="Icerik"></textarea>
+            <br />
+            <input type="submit" value="YORUM EKLE" />
+        </form>
+    </div>
+</body>
+</html>
