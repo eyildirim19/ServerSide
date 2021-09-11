@@ -1,0 +1,40 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+
+
+        <!--
+
+        Partial view => alt viewlar olarak düşünebilir. bir sayfada veya birden fazla sayfada render edilebilen sayfalardır. aslında partialview diye bir view yoktur. Sadece bir view'ı partial olarak çağırabiliriz..
+
+            Niye partial view kullanmalıyız??
+
+            -- Layout page'ler sayfanın genel hatlarını oluşturmak için kullanılır.
+            --Partial pageler ise sayfa içerisindeki ortak tasarımları yapmak için kullanışlır. yani ortak tasarım ve ortak kodlama yapmak için kullanılır..Buda uygulama içerisinde modüler geliştirme sağlar.
+
+
+            -->
+        <!--benim sayfam adlı view'ı burada render..-->
+        @Html.Partial("BenimSayfam")
+
+
+        <div>
+            @Html.Partial("BenimSayfam")
+        </div>
+
+
+
+    </div>
+</body>
+</html>
