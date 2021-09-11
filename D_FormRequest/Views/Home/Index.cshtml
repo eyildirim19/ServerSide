@@ -1,0 +1,87 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @*
+        Eğer veri server'a form tagi ile gönderilecekse form içeriisndeki veri inputlarına name verilmelidir...
+
+        Name attribute server'da veriye ulaşmak için kullanılır. Name attributesini id gibi düşünebiliriz..
+        *@
+
+
+        @*
+        action attribute controllerdaki action adıdır..
+        *@
+
+        <form action="kelime-ile-arama">
+            <input name="query_text" />
+            <br />
+            <input type="submit" value="Ara" />
+        </form>
+
+        <form action="Home/Request1" method="post">
+            <input type="text" name="Adi" />
+            <br />
+            <input type="text" name="Soyadi" />
+            <br />
+            <input type="submit" value="Gönder" /> <!-- bu control formu göndereceği için name verilmesine gerek yok..-->
+        </form>
+
+        <br />
+        <br />
+        <br />
+
+        <form action="Home/Request2" method="post">
+            <input type="text" name="Adi" />
+            <br />
+            <input type="text" name="Soyadi" />
+            <br />
+            <input type="submit" value="Gönder" /> <!-- bu control formu göndereceği için name verilmesine gerek yok..-->
+        </form>
+        <br />
+        <br />
+        <br />
+        <form action="Home/Request3" method="post">
+            <input type="text" name="Adi" />
+            <br />
+            <input type="text" name="Soyadi" />
+            <br />
+            <input type="submit" value="Gönder" /> <!-- bu control formu göndereceği için name verilmesine gerek yok..-->
+        </form>
+        <br />
+        <br />
+        <form action="Home/Request4" method="post">
+            <input type="text" name="Adi" />
+            <br />
+            <input type="text" name="Soyadi" />
+            <br />
+            <input type="submit" value="Gönder" /> <!-- bu control formu göndereceği için name verilmesine gerek yok..-->
+        </form>
+
+
+
+        <br />
+        <br />
+        <form action="https://secure.sahibinden.com/giris" method="post">
+
+            <input type="text"  name="username"/>
+            <br />
+            <input type="text" name="password" />
+            <br />
+            <input type="submit" value="Saldır..." />
+
+        </form>
+        
+
+
+    </div>
+</body>
+</html>

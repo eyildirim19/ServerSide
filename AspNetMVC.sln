@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C_Models", "C_Models\C_Mode
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C_ModelsApp", "C_ModelsApp\C_ModelsApp.csproj", "{D03DF5A7-D558-441C-90B2-AB40385A0851}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D_FormRequest", "D_FormRequest\D_FormRequest.csproj", "{486E7C95-4AEA-4907-BC0C-FF3E807C46B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D03DF5A7-D558-441C-90B2-AB40385A0851}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D03DF5A7-D558-441C-90B2-AB40385A0851}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D03DF5A7-D558-441C-90B2-AB40385A0851}.Release|Any CPU.Build.0 = Release|Any CPU
+		{486E7C95-4AEA-4907-BC0C-FF3E807C46B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{486E7C95-4AEA-4907-BC0C-FF3E807C46B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{486E7C95-4AEA-4907-BC0C-FF3E807C46B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{486E7C95-4AEA-4907-BC0C-FF3E807C46B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
