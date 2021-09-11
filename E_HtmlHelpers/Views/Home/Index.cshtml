@@ -1,0 +1,52 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @*
+            html.helperlar html render eden c# komutlarıdır....
+        *@
+        <br />
+        @Html.TextBox("Adisi")
+        <br />
+        <a href="/Home/Detay">content</a>
+        <br />
+        @*Url.Action =>  Url render eder.. il parametresi action 2. controller 3. parametre diye gider...*@
+        <a href="@Url.Action("Detay", "Home")">content2</a>
+        <br />
+        <a href="/Home/Kelime-ile-arama?query_text=deneme">content</a>
+        <br />
+        <a href="@Url.Action("Kelime-ile-arama", "Home", new { query_text = "deneme" })">contrent22</a>
+        <br />
+        <a href="/Account/UyeOl">Üye Ol</a>
+        <br />
+        <a href="@Url.Action("UyeOl", "Account")">Üye Ol</a>
+        <br />
+        @Html.ActionLink("Üye Ol", "UyeOl", "Account")
+        <br />
+
+        <form action="Search/Kelime-ile-arama">
+            <input type="text" name="txtAdi" />
+        </form>
+        <br /><br />
+        @Html.BeginForm("Kelime-ile-arama", "Search")
+        <input type="text" name="txtAdi" />
+        @{ Html.EndForm(); }
+        <br /><br />
+        @using (Html.BeginForm("Kelime-ile-arama", "Search"))
+        {
+            <input type="text" name="txtAdi" />
+        }
+
+    </div>
+</body>
+</html>

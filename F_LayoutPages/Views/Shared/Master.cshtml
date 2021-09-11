@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Master</title>
+</head>
+<body>
+
+    <div>
+        <!--Not bu sayfa diğer alt sayfaların tasarımı referans aldığı taslak sayfadır...-->
+        <table style="width:100%">
+            <tr>
+                <td>
+                    <img src="https://www.btakademi.com/images/btAkademi_logo.png" style="width:150px;" />
+                </td>
+                <td valign="top" align="right">
+                    <a href="@Url.Action("Index","Sablon")">Anasayfa</a>
+                    |
+                    <a href="@Url.Action("About","Sablon")">Hakkımızda</a>
+                    |
+                    <a href="@Url.Action("Index","Contact")">İletişim</a>
+                </td>
+            </tr>
+        </table>
+        <hr />
+        <div id="content">
+            @*
+        Bu sayfayı layout olarak kullanan alt sayfalarda render et...
+            *@
+            @RenderBody()
+        </div>
+        <div id="footer">
+            Burası sayfanın altı... 
+        </div>
+    </div>
+</body>
+</html>
