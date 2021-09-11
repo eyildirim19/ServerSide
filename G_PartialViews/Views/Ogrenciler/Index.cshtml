@@ -1,0 +1,53 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <a href="@Url.Action("Index","Home")">Geri Dön...</a>
+
+        @Html.Partial("View")
+        <!--
+            Not. Shard klasörüne sağ tık yapıp yeni bir partial view oluşuruy-ruz..Ismine ogrencitemplate diyoruz...
+            NOT : PARTIAL VE LAYOUT PAGELERDE İSMİN ÖNÜNE _ EKLEYİNİZ...
+
+            Örneğimiz partial view'a parametre göndermektir....Partial viewlarda bir view oldğu için model belirtilebilir. bu modeller viewlara çağırırken gönderilebilir...
+        -->
+
+        @Html.Partial("_ogrencitemplate", "ekrem yıldırım")
+
+        <br />
+        <br />
+
+        @{
+            List<string> ogrencilerim = new List<string>();
+            ogrencilerim.Add("Emre");
+            ogrencilerim.Add("Kaan");
+            ogrencilerim.Add("Ferit");
+            ogrencilerim.Add("Öykü");
+            ogrencilerim.Add("Emin");
+            ogrencilerim.Add("Rukiye");
+            ogrencilerim.Add("Muhammet");
+        }
+
+        <br />
+        @foreach (var item in ogrencilerim)
+        {
+
+            @Html.Partial("_ogrencitemplate", item);
+        }
+
+
+    </div>
+</body>
+</html>
