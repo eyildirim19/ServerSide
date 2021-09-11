@@ -47,6 +47,20 @@
             @Html.Partial("_ogrencitemplate", item);
         }
 
+        <!--
+            Html.Action => controllerden action render eder...
+         -->
+
+
+        @Html.Action("Action1", "Home") <!-- Home controllerdan bu actionı çağır ve render et.. -->
+        <br />
+        @Html.Action("Eksın", "Home")
+        <br />
+        @Html.Action("Ogrenciler", "Home")
+
+
+
+
 
     </div>
 </body>
