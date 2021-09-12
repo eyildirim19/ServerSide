@@ -1,0 +1,47 @@
+﻿@model int
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script>
+        var sayac = 0;
+
+        function Artim() {
+            sayac++;
+            document.getElementById("hResult").innerHTML = sayac;
+        }
+    </script>
+
+</head>
+<body>
+    <div>
+        <fieldset>
+            <legend>Client</legend>
+
+            <h1 id="hResult">0</h1>
+
+            <!--client için-->
+            <input type="button" value="Arttır" onclick="Artim()" />
+        </fieldset>
+        <fieldset>
+            <legend>Server</legend>
+
+            <!--Server request yapılırken response durumunda sayfa sıfırdan tekrar oluşur. sayfaki herşey ilk defa yükleniyormuş gibi render edilir. Bu yüzden sayfanın tamamını serverdan istememeliyiz. (ajax konusunda değineceğiz.). Anca serverdn clienta response olurken herşey sıfırlanır. Bu durumda mevcut verilerimizi korumamız gerekiyor.....-->
+
+            @using (Html.BeginForm("Arttir", "Home"))
+            {
+                <h1>@Model</h1>
+                <!--Server için-->
+                <input type="submit" value="Arttır 2" />
+            }
+        </fieldset>
+
+    </div>
+</body>
+</html>

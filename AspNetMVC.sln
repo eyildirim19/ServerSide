@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "F_LayoutPages", "F_LayoutPa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "G_PartialViews", "G_PartialViews\G_PartialViews.csproj", "{D88853CD-394D-4A42-B655-DDC938A52356}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H_StateManagement", "H_StateManagement\H_StateManagement.csproj", "{97B2C6CA-D3A3-4932-B6D7-918FEDC9D07E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{D88853CD-394D-4A42-B655-DDC938A52356}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D88853CD-394D-4A42-B655-DDC938A52356}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D88853CD-394D-4A42-B655-DDC938A52356}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97B2C6CA-D3A3-4932-B6D7-918FEDC9D07E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97B2C6CA-D3A3-4932-B6D7-918FEDC9D07E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97B2C6CA-D3A3-4932-B6D7-918FEDC9D07E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97B2C6CA-D3A3-4932-B6D7-918FEDC9D07E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
