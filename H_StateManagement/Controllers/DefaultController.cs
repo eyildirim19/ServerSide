@@ -11,9 +11,7 @@ namespace H_StateManagement.Controllers
         // GET: Default
         public ActionResult Index()
         {
-
             // saklanan cookie bulalım..
-
             HttpCookie kuk = Request.Cookies["kuk"];
             string val = "";
             if (kuk != null)
