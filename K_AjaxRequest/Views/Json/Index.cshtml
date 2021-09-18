@@ -1,0 +1,50 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+
+    <script>
+        // Json=> Javascript Object Notation => xml gibi işaretleme dilidir. Javascript ile manipülasyonu daha kolaydır.. XMl'den farkı veri tipinin olmasıdır...
+        // {} json objesi demektir...
+        // Json datalar genellikle web apiler ile veritransfer formatı ve ajax teknolojisinde veri transfer aracı olarak kullanılır..
+        // Key:Value
+        var jsonData = { Adi: "Ekrem", SoyAdi: "Yıldırım", Evlimi: true, Yas: 33 };
+        /*
+            <Kisi><Adi>Ekrem</Adi><SoyAdi>Yıldırım</SoyAdi><Evlimi>true</Evlimi><Yas>33</Yas></Kisi>
+        */
+        // [] => json array'dir
+        var jsonArray = [1, 2, 3];
+        var isimler = ["Ekrem", "Ferit", "Emre"];
+        var kisiler = [{ Adi: "ekrem" }, { Adi: "Ferit" }, { Adi: "Emre" }];
+
+        function BunlariOku() {
+            for (var i = 0; i < jsonArray.length; i++) {
+                console.log(jsonArray[i]);
+            }
+            console.log("******************");
+            for (var i = 0; i < isimler.length; i++) {
+                console.log(isimler[i]);
+            }
+            console.log("******************");
+            for (var i = 0; i < kisiler.length; i++) {
+                console.log(kisiler[i].Adi); // Json object array
+            }
+        }
+
+        BunlariOku();
+    </script>
+
+</head>
+<body>
+    <div>
+    </div>
+</body>
+</html>

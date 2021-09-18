@@ -1,0 +1,45 @@
+﻿@model List<K_AjaxRequest.Models.Urun>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @foreach (var item in Model)
+        {
+            <h1>@item.Adi</h1>
+            <h2>@item.Fiyat</h2>
+            <hr />
+        }
+
+        @using (Html.BeginForm("Kaydet", "Home"))
+        {
+            <input type="submit" value="Kaydet" />
+        }
+
+
+        <!--
+
+            sayfalarımızdan server'a request atıldığında server işlemleri bitirdikten sorna tekrar bize sayfa döner.. buda sayfanın yeni oluşması demektir. sayfanın yeniden oluşuması sayfa içerisindeki verilerinde oluşması anlamına gelecektir...
+
+
+            Ajax (Asenkron Javascript And Xml)
+
+
+            Ajax teknolojisi => web sayfalarından request yapılıp cevap geldiğinde sayfanın tamamını yüklemek yerine sadece belirb bir kısmı güncelemesini sağlar. Serverda ajax requestlerde sayfa dönmek yerine xml veya json data veya html (vb)dönülür...
+
+            Ajax request sayfanın tamamanı yüklemesini engeler.
+
+            -->
+
+
+    </div>
+</body>
+</html>
+

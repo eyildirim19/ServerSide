@@ -1,0 +1,59 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <script src="~/Scripts/jquery-3.6.0.js"></script>
+
+    <script>
+
+        // Javascript ile
+        function Getir() {
+
+            var request = new XMLHttpRequest(); // XmlHttpRequest ajax requestleri yapmak için kullanılan javascript objesidir. Bu objeden instace alınıp bunun metotları kullanılır...
+            request.open("GET", "@Url.Action("Kayit","JsonApp")"); // Request type ve Request Url verilir
+            request.send(); // Requesti gönder.....
+            // onreadystatechange => yapılan requestin cevabu bu özellikte alınır....
+
+            request.onreadystatechange = function () {
+                console.log(request.responseText); // gelen responseu ekrana yaz...
+                document.getElementById("hResponse").innerHTML = request.responseText;
+            }
+        }
+        // query ile
+
+        function Getir2() {
+
+            $.ajax({
+                type: "GET", // Request Type
+                url: "@Url.Action("Kayit","JsonApp")", // Request Url
+                contentType:"application/json", // request content type json request,
+                dataType:"json", // Response Type
+                success: function (response) { // request başarılı sonuçlandığında...
+                    console.log(response);
+                    $("#hResp").html(response.Mesaj);
+                }
+            });
+        }
+    </script>
+
+</head>
+<body>
+    <div>
+        @*Ajax request ile serverdan veri çekelim...*@
+        <!--ajax reqeustde forma gerek yoktur. request javascript ile atılır...-->
+        <input type="button" value="Veriyi Getir..." id="btnGetirwithJavascript" onclick="Getir()" />
+        <h1 id="hResponse"></h1>
+
+        <br />
+
+        <input type="button" value="Veri Getir1" onclick="Getir2()" />
+        <h1 id="hResp"></h1>
+
+    </div>
+</body>
+</html>
