@@ -25,7 +25,7 @@ namespace D_FormRequest.Controllers
             return View();
         }
 
-        // FormCollection parametresi ile formda gelen veriler yakalanabilir...FormCollection request yapılan formu array olarak kabul eder..
+        // FormCollection parametresi ile formdan gelen veriler yakalanabilir...FormCollection request yapılan formu array olarak kabul eder..
         [HttpPost]
         public ActionResult Request2(FormCollection c)
         {
