@@ -1,0 +1,51 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <script src="~/Scripts/jquery-3.6.0.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+</head>
+<body>
+    <div>
+        @*
+        json dataları formatlı görmek için;
+        http://jsonviewer.stack.hu/
+        *@
+        @using (Html.BeginForm("Ornek1", "MvcAjaxRequest"))
+        {
+            <input type="submit" value="Request Yap...." />
+        }
+        <br />
+        @using (Ajax.BeginForm("Ornek2", "MvcAjaxRequest", new AjaxOptions { OnBegin = "RequestStart", OnSuccess = "Cevap" }))
+        {
+            <input type="submit" value="Request Yap2" id="btnAjaxSubmit" />
+        }
+        <script>
+            function RequestStart() {
+                $("#btnAjaxSubmit").val("İşlem Yapılıyor Lütfen Bekleyiniz");
+            }
+            function Cevap(r) {
+                $("#btnAjaxSubmit").val("Request Yap2");
+                $("#hResult").html(r.Mesaj);
+                console.log(r.ResponseType);
+                console.log(r.DurumKodu);
+            }
+        </script>
+        <h1 id="hResult"></h1>
+
+        @*
+        Ajax beginform => ajax requestleri yapmak için kullanılır. Ajax begin formun çalışabilmesi için Jquery.unobtrusive-ajax kütüphanesini indirmeniz gerekir. ayrıca sayfaınıza jqueryy kütüphensi ile eklemeniz gerekir.
+
+        Ajax.BeginForm içeirisnde AjaxOption Parametresi var. Ajax parameterleir buradan ayarlanır... AjaxOptions özelliklerii belirlediğimiz javascript fonksiyonları tetikler...
+        *@
+    </div>
+</body>
+</html>

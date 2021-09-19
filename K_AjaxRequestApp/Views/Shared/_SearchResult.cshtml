@@ -1,0 +1,10 @@
+﻿@model List<K_AjaxRequestApp.Models.Products>
+
+    <ul class="list-group">
+
+        @foreach (var item in Model)
+        {
+            <li class="list-group-item"><a class="link-info" href="#">@item.ProductName</a></li>
+        }
+
+    </ul>

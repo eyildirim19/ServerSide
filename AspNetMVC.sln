@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J_MVCControllerWithAction",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K_AjaxRequest", "K_AjaxRequest\K_AjaxRequest.csproj", "{04A4E9CC-9878-4FDC-8BDE-F8D49558AC72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K_AjaxRequestApp", "K_AjaxRequestApp\K_AjaxRequestApp.csproj", "{5C3B7822-EC11-4F25-8F36-4FD5BAB47299}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{04A4E9CC-9878-4FDC-8BDE-F8D49558AC72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04A4E9CC-9878-4FDC-8BDE-F8D49558AC72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04A4E9CC-9878-4FDC-8BDE-F8D49558AC72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C3B7822-EC11-4F25-8F36-4FD5BAB47299}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C3B7822-EC11-4F25-8F36-4FD5BAB47299}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C3B7822-EC11-4F25-8F36-4FD5BAB47299}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C3B7822-EC11-4F25-8F36-4FD5BAB47299}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

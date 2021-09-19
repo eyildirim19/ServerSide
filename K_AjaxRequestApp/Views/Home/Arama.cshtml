@@ -1,0 +1,55 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+
+    <script src="~/Scripts/jquery-1.8.0.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+</head>
+<body>
+    <div class="container">
+        <br />
+        <br />
+        <br />
+        <h1>
+            <span class="text-danger">BT</span><span class="text-info">AKADEMİ</span> Arama Moturu
+        </h1>
+
+        @using (Ajax.BeginForm("SearchWithJson", "Home", new AjaxOptions { OnSuccess = "SearchResponse" }))
+        {
+            <input autocomplete="off" name="SearchText" type="text" class="form-control" />
+        }
+
+        <div id="searchResult">
+        </div>
+
+        <script>
+
+            $(document).ready(function () {
+
+                $("[name='SearchText']").keyup(function () {
+                    $("#form0").submit();
+                });
+
+            });
+
+            function SearchResponse(r) {
+
+                var html = "<ul class='list-group'>";
+                for (var i = 0; i < r.length; i++) {
+                    html += "<li class='list-group-item'>"+ r[i].ProductName +"</li>";
+                }
+                html += "</ul>";
+                $("#searchResult").html(html);
+            }
+        </script>
+
+    </div>
+</body>
+</html>
